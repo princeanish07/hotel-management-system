@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Uabout.css"; 
 import { FaPeopleGroup, FaHotel } from 'react-icons/fa6';
 import { IoIosPeople } from 'react-icons/io';
@@ -9,8 +9,11 @@ import hotel4_gallery from '../../../assets/hotel3-gallery.jpg'
 
 
 const Uabout = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="about-heading">
           <h1>About Us</h1>
         </div>

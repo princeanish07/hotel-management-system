@@ -1,0 +1,76 @@
+.Ucontact{
+    display: flex;
+    padding: 60px;
+    width: 100%;
+
+   
+}
+.Ucontact-details{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    width: 40%;
+}
+.Ucontact-details>.Ucontact-details-heading>h3{
+    font-size: 20px;
+    font-weight: 450;
+    text-align: center;
+}
+.Ucontact-detail-li>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  
+}
+.Ucontact-detail-li>ul>li{
+    font-size:16px;
+    color: black;
+    gap: 10px;
+    
+}
+.Ucontact-detail-li>ul>li>span{
+    font-size: 26px;
+    color: black;
+    padding-right: 20px;
+}
+
+
+.leftdiv
+{
+    width: 40%;
+    padding: 20px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+.leftdiv{
+    background-color: #F5F5F5;
+    align-items: center;
+}
+.rightdiv{
+    width: 60%;
+}
+.icontext{
+    display: flex;
+    flex-direction: row;
+    margin-left: -10px;
+}
+.leftdiv, .icontext{
+    padding: 20px;
+}
+.leftdiv p{
+   border-bottom:2px solid #C39B38;
+   padding-bottom: 9px;
+}
+iframe{
+    border: none;
+}
+.iconcontainer{
+    font-size: 25px;
+    padding-right: 15px;
+}
+span{
+    font-size: 12px;
+    font-family: sans-serif;
+    color:#646464;
+}

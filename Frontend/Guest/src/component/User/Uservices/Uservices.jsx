@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Uservices.css'
 import { IoIosArrowForward } from "react-icons/io";
 const Uservices = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
+  
   <>
-  <div className="services">
+  <div id='service' className="services">
     <div className="facility-con">
       <h1>OUR FACILITIES</h1>
     </div>

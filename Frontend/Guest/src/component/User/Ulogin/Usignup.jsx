@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Usignup = () => {
   return (
-    <div class="user-signup-form">
+    <div id='register' class="user-signup-form">
        <div >
       <h2>Sign Up</h2>
    

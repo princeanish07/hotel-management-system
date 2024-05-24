@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Uaccomodation.css'
 import { Link } from 'react-router-dom'
 import { rooms } from './Unaccomodation.js'
 
 const Uaccomodation = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <>
-      <div className="accomodation">
+      <div id='accommodation' className="accomodation">
         <div className="accomodation-con">
           <h1>Accomodation</h1>
         </div>

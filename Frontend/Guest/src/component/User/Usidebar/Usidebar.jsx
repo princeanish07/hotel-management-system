@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Usidebar.css';
 import { Link } from 'react-router-dom'; 
+
 
 const Usidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,16 @@ const Usidebar = () => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+  const handleClick = (id) => {
+    const target = document.getElementById(id);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth'});
+    }
+};
+
+useEffect(()=>{
+  window.scrollTo(0, 0);
+},[])
 
   return (
     <div>
@@ -26,48 +37,48 @@ const Usidebar = () => {
           </div>
         )}
           <ul onClick={toggleSidebar}  >
-        <li >
-          <Link to="/" className='Usidebar-link' >
+          <Link  onClick={() => handleClick('home') }to='/'  >
+        <li  className='Usidebar-link' >
             Home
-          </Link>
         </li>
+          </Link>
 
-        <li >
-          <Link to="/about" className='Usidebar-link' >
+          <Link to="/about" className='Usidebar-link'   >
+        <li  onClick={() => handleClick('about') }>
             About Us
-          </Link>
         </li>
+          </Link>
+          <Link to="/accomodation" className='Usidebar-link' onClick={() => handleClick('accommodation') }>
         <li>
-          <Link to="/accomodation" className='Usidebar-link'>
             Accomodation
-          </Link>
         </li>
+          </Link>
+          <Link to="/services" className='Usidebar-link' onClick={() => handleClick('service')}>
         <li >
-          <Link to="/services" className='Usidebar-link'>
             Service
-          </Link>
         </li>
+          </Link>
        
+          <Link to="/banquetsconferencehallandmeetingrooms"className='Usidebar-link' onClick={() => handleClick('conferencehall')} >
             <li >
-          <Link to="/banquetsconferencehallandmeetingrooms"className='Usidebar-link' >
           BANQUETS, CONFERENCE HALL AND MEETING ROOMS
-          </Link>
         </li>
+          </Link>
+          <Link to="/gallery" className='Usidebar-link' onClick={() => handleClick('gallery')}>
         <li >
-          <Link to="/gallery" className='Usidebar-link'>
             Gallery
-          </Link>
         </li>
+          </Link>
+          <Link to="/contact"className='Usidebar-link' onClick={() => handleClick('contact')} >
         <li >
-          <Link to="/contact"className='Usidebar-link' >
             Contact
-          </Link>
         </li>
+          </Link>
+          <Link to="/dining"className='Usidebar-link' onClick={() => handleClick('dining')} >
         <li >
-          <Link to="/dining"className='Usidebar-link' >
             Dining
-          </Link>
         </li>
+          </Link>
         </ul>
       </div>
     </div>

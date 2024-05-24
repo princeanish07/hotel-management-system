@@ -16,6 +16,10 @@ import Homepage from './Pages/Adminpage/Homepage/Homepage';
 import Gallery from './component/User/Ugallery/Ugallery'
 import Dining from './component/User/Udining/Udining'
 import Sidebar from './component/User/Usidebar/Usidebar';
+import Uconferencehall from './component/User/Uconferencehall/Uconferencehall';
+import Footer from './component/User/Ufooter/Ufooter';
+import Ucareer from './component/User/Ucareer/Ucareer';
+
 
 const App = () => {
   return (
@@ -36,9 +40,14 @@ const App = () => {
         <Route path="/signup" element={<Signup/>} />
         <Route path="/dining" element={<Dining/>} />
         <Route path="/sidebar" element={<Sidebar/>} />
+        <Route path="/career" element={<Ucareer/>} />
+
+        <Route path="/banquetsconferencehallandmeetingrooms" element={<Uconferencehall/>} />
+
 
 
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './Udining.css'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,13 +13,25 @@ import swipeimg5 from './Udining-img/swipeimg5.jpg'
 import swipeimg6 from './Udining-img/swipeimg6.jpg'
 import swipeimg7 from './Udining-img/swipeimg7.jpg'
 import pan_asian from './Udining-img/pan-asianimg3.jpg'
-
-
+import tigerbar from './Udining-img/tigerbar-img2.jpg'
+import  pastryshop from './Udining-img/pastryimg.png'
+import roomservice from './Udining-img/roomserviceimg.png'
 import "swiper/css";
+
+const diningimg={
+  swipeimages:[swipeimg1,swipeimg2,swipeimg3,swipeimg4,swipeimg5,swipeimg5,swipeimg6,swipeimg7]
+}
+
+  
+
+
 const Udining = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <>
-    <div className="Udining">
+    <div id='dining' className="Udining">
         <div className="Udining-con">
             <h1>The Cafe</h1>
         </div>
@@ -35,7 +47,7 @@ const Udining = () => {
                        an appetizer counter and the salad bar. “Eating out of the pan, off the grill and out of the tandoor” 
                        is what best describes The Café.</p>
             </div>
-            <div className="Udining-cafe-swiper">
+            <div  className="Udining-cafe-swiper">
             <Swiper
         slidesPerView={1}
         spaceBetween={0}
@@ -46,46 +58,16 @@ const Udining = () => {
         }}
         navigation={true}
         modules={[Pagination ,Autoplay,Navigation]}
-        className="mySwiper">
+        className="mySwiper-dining">
       
-        <SwiperSlide>
-          <div className="background">
-            <img src={swipeimg1} alt="" />
-            
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="background">
-            <img src={swipeimg2}  alt="" />
-            
-          </div>
-        </SwiperSlide> <SwiperSlide>
-          <div className="background">
-            <img src={swipeimg3}  alt="" />
-            
-          </div>
-        </SwiperSlide> <SwiperSlide>
-          <div className="background">
-            <img src={swipeimg4}  alt="" />
-            
-          </div>
-        </SwiperSlide> <SwiperSlide>
-          <div className="background">
-            <img src={swipeimg5}  alt="" />
-            
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="background">
-            <img src={swipeimg6}  alt="" />
-            
-          </div>
-        </SwiperSlide><SwiperSlide>
-          <div className="background">
-            <img src={swipeimg7}  alt="" />
-            
-          </div>
-        </SwiperSlide>
+       
+      
+        {diningimg.swipeimages.map((src, index) => (
+           <SwiperSlide className='swiper-slide-dining' key={index}>
+          <img  src={src} alt='' />
+          </SwiperSlide>
+        ))}
+      
         </Swiper>
             </div>
         </div>
@@ -98,18 +80,18 @@ const Udining = () => {
           </div>
           <div className="Udining-special-items">
           <Link to='/dining/buggles&tigersbar' className='dining-link'><div className='Udining-special-img'>
-          <img src={pan_asian } alt="" />
+          <img src={tigerbar} alt="" />
           <h3> Buggles & Tigers Bar</h3>
             </div></Link>
           </div>
           <div className="Udining-special-items">
           <Link to='/dining/ourpastryshop' className='dining-link'><div className='Udining-special-img'>
-          <img src={pan_asian } alt="" />
+          <img src={pastryshop } alt="" />
           <h3> Sidewalk-Our Pastry Shop</h3>
             </div></Link>
           </div><div className="Udining-special-items" >
           <Link to='/dining/roomservice' className='dining-link'><div className='Udining-special-img'>
-          <img src={pan_asian } alt="" />
+          <img src={roomservice } alt="" />
           <h3> Room Service</h3>
             </div></Link>
           </div>

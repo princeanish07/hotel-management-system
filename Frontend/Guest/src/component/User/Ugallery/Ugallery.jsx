@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Ugallery.css'
 import property1 from './Ugallery-img/property1.jpg';
 import property2 from './Ugallery-img/property2.jpg';
@@ -40,6 +40,9 @@ const images = {
 
 
 const Ugallery = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   const [filter, setFilter] = useState('all');
 
   const getFilteredImages = () => {
@@ -52,7 +55,7 @@ const Ugallery = () => {
   const filteredImages = getFilteredImages();
 
   return (
-    <div className='Ugallery'>
+    <div id='gallery' className='Ugallery'>
       <div className="Ugallery-heading">
         <h1>Gallery</h1>
       </div>

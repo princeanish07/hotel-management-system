@@ -2,7 +2,7 @@ import React from 'react'
 
 const Ukitchen = () => {
   return (
-    <div>Ukitchen</div>
+    <div >Ukitchen</div>
   )
 }
 
