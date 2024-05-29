@@ -17,6 +17,8 @@ import tigerbar from './Udining-img/tigerbar-img2.jpg'
 import  pastryshop from './Udining-img/pastryimg.png'
 import roomservice from './Udining-img/roomserviceimg.png'
 import "swiper/css";
+import Usidebar from '../Usidebar/Usidebar';
+import Ufooter from '../Ufooter/Ufooter';
 
 const diningimg={
   swipeimages:[swipeimg1,swipeimg2,swipeimg3,swipeimg4,swipeimg5,swipeimg5,swipeimg6,swipeimg7]
@@ -97,6 +99,8 @@ const Udining = () => {
           </div>
         </div>
     </div>
+    <Usidebar/>
+    <Ufooter/>
     </>
   )
 }

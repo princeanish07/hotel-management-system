@@ -3,6 +3,8 @@ import './Ucontact.css'
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Usidebar from '../Usidebar/Usidebar';
+import Ufooter from '../Ufooter/Ufooter';
 
 const Ucontact = () => {
  
@@ -41,6 +43,8 @@ const Ucontact = () => {
         </div>
     
     </div>
+    <Usidebar/>
+    <Ufooter/>
     </>
   )
 }

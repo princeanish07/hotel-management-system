@@ -25,6 +25,8 @@ import room7 from './Ugallery-img/room7.jpg'
 import room8 from './Ugallery-img/room8.jpg'
 import room9 from './Ugallery-img/room9.jpg'
 import room10 from './Ugallery-img/room10.jpg'
+import Ufooter from '../Ufooter/Ufooter';
+import Usidebar from '../Usidebar/Usidebar';
 
 
 
@@ -55,6 +57,8 @@ const Ugallery = () => {
   const filteredImages = getFilteredImages();
 
   return (
+    <>
+    
     <div id='gallery' className='Ugallery'>
       <div className="Ugallery-heading">
         <h1>Gallery</h1>
@@ -70,6 +74,10 @@ const Ugallery = () => {
         ))}
       </div>
     </div>
+    <Usidebar/>
+    <Ufooter/>
+    
+    </>
     );
 }
 

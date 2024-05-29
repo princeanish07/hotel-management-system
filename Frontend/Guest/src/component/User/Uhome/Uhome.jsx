@@ -14,6 +14,10 @@ import hotel2_background from "./Uhome-gallery/hotel-background-img2.jpg";
 import hotel3_background from "./Uhome-gallery/hotel-background-img3.jpg";
 import hotel4_background from "./Uhome-gallery/hotel-background-img4.jpg";
 import hotel5_background from "./Uhome-gallery/hotel-background-img5.jpg";
+import Ufooter from "../Ufooter/Ufooter";
+import Usidebar from "../Usidebar/Usidebar";
+import Uabout from "../Uabout/Uabout";
+import Uaccomodation from "../Uaccomodation/Uaccomodation";
 
 
 const hotelhomegallery={
@@ -25,6 +29,8 @@ const Uhome = () => {
   },[])
 
   return (
+    <>
+    
     <div id="home">
       <Swiper
         slidesPerView={1}
@@ -44,8 +50,13 @@ const Uhome = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      
     </div>
+    <Usidebar/>
+    
+    <Ufooter/>
+    </>
+      
+      
   );
 };
 

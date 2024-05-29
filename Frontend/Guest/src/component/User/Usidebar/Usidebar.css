@@ -11,7 +11,7 @@
   /* Base styling for the sidebar */
   .Usidebar {
     height: 100%;
-    width: 200px;
+    width: 250px;
     position: fixed;
     top: 0;
     right: -250px; /* Initially hide the sidebar */
@@ -29,7 +29,7 @@
   
   /* Styling for the close icon inside the sidebar */
   .close-icon {
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     position: absolute;
     top: 20px;
@@ -79,6 +79,7 @@
     transition: 0.3s;
     width: 100%;
     cursor: pointer;
+    text-align: center;
   }
   
   .Usidebar li:hover{

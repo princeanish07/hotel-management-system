@@ -6,6 +6,8 @@ import hotel1_gallery from '../../../assets/hotel-gallery.jpg'
 import hotel2_gallery from '../../../assets/hotel1-gallery.jpg'
 import hotel3_gallery from '../../../assets/hotel2-gallery.jpg'
 import hotel4_gallery from '../../../assets/hotel3-gallery.jpg'
+import Ufooter from "../Ufooter/Ufooter";
+import Usidebar from "../Usidebar/Usidebar";
 
 
 const Uabout = () => {
@@ -13,6 +15,7 @@ const Uabout = () => {
     window.scrollTo(0, 0);
   },[])
   return (
+    <>
     <div id="about" className="about">
       <div className="about-heading">
           <h1>About Us</h1>
@@ -63,6 +66,10 @@ const Uabout = () => {
         </div>
       </div>
     </div>
+    <Usidebar/>
+    <Ufooter/>
+    
+    </>
   );
 };
 

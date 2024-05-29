@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import './Uservices.css'
 import { IoIosArrowForward } from "react-icons/io";
+import Ufooter from '../Ufooter/Ufooter';
+import Usidebar from '../Usidebar/Usidebar';
 const Uservices = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
@@ -47,9 +49,11 @@ const Uservices = () => {
         <li className="facility-item"><span><IoIosArrowForward/></span><span>Late Check-out</span></li>
        
       </ul>
+
     </div>
   </div>
-  
+  <Usidebar/>
+  <Ufooter/>
   </>
   )
 }

@@ -32,7 +32,7 @@ export const rooms = [
     {
       title: "SUITE ROOM WITH 2 WAY AIRPORT TRANSFERS",
       description: "The Suite rooms are elegantly designed to suit the modern requirements of our discerning clientele. Each room has been aesthetically crafted to reflect the Contemporary style, ethos.",
-      imageUrl: suiteroom, 
+      imageUrl: suiteroom,
       link: "/readmore-suite"
     }
   ];
