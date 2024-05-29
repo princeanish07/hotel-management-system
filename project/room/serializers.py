@@ -1,6 +1,10 @@
 from rest_framework import serializers
 
 
+
+
+
+
 class Amenities(serializers.Serializer):
     amenity=serializers.CharField(max_length=100)
     created_at=serializers.DateField(auto_now_add=True)
