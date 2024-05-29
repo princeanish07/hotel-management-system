@@ -6,16 +6,28 @@ from .models import User
 from .serializers import UserSerializer
 from django.contrib.auth.hashers import check_password
 from django.conf import settings
+
 import jwt
 import datetime
+from django.core.mail import send_mail
+from django.contrib.auth.forms import PasswordChangeForm
 
 class SignUpView(APIView):
+   
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
+            user=serializer.save()
+            self.send_confirmation_email(user)
             return Response({'message': 'Sign Up completed successfully'}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    def send_confirmation_email(self, user):
+        subject = 'Welcome to Hotel Management System'
+        message = f'Hi {user.name},\n\nThank you for registering at Our website We are excited to have you on board!'
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = [user.email]
+        
+        send_mail(subject, message, from_email, recipient_list)   
 
 class LoginView(APIView):
     def post(self, request):
