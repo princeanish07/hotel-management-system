@@ -21,10 +21,15 @@ import Footer from './component/User/Ufooter/Ufooter';
 import Ucareer from './component/User/Ucareer/Ucareer';
 import Ufooter from './component/User/Ufooter/Ufooter';
 import Arooms from './component/Admin/Arooms/Arooms';
-
+import axios from "axios"
 
 const App = () => {
+  const getdata = async()=>{
+    await axios.get("")
+  }
   return (
+
+
     <BrowserRouter>
     
      
