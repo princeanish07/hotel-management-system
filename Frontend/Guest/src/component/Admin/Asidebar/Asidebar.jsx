@@ -1,5 +1,6 @@
 import React from "react";
 import "./Asidebar.css";
+import {NavLink , Link } from "react-router-dom";
 import {
   MdDashboard,
   MdMiscellaneousServices,
@@ -24,8 +25,8 @@ const Asidebar = () => {
               <li>
               <span><MdDashboard/>  </span>   <span>Dashboard</span>
               </li>
-              <li><span><FaHouse/>  </span>   <span>Rooms</span></li>
-              <li><span><MdMiscellaneousServices/>  </span>   <span>Services</span></li>
+              <li><span><FaHouse/>  </span>   <span> <NavLink to='/arooms'> Rooms</NavLink>  </span></li>
+              <li><span><MdMiscellaneousServices/>  </span>   <span><NavLink to='/aservices'>Services</NavLink></span></li>
               <li><span><MdOutlineSoupKitchen/>  </span>   <span>Kitchen</span></li>
               <li><span><FcBusinessman/>  </span>   <span>Customer</span></li>
               <li><span><CiCircleChevRight/>  </span>   <span>Check In</span></li>

@@ -14,6 +14,9 @@ import hallimg6 from "./Uconferencehall-img/hallimg6.jpg";
 import hallimg7 from "./Uconferencehall-img/hallimg7.jpg";
 import farpavilion from './Uconferencehall-img/farpavillion1.jpg'
 
+import Ufooter from "../Ufooter/Ufooter";
+import Usidebar from "../Usidebar/Usidebar";
+
 // import "swiper/css";
 const hallimage={
     meetinghallimg:[hallimg1,hallimg2,hallimg3,hallimg4,hallimg5,hallimg6,hallimg7],
@@ -102,6 +105,8 @@ const Uconferencehall = () => {
           </div>
         </div>
       </div>
+      <Usidebar/>
+      <Ufooter/>
     </>
   );
 };

@@ -3,6 +3,10 @@ import './Uaccomodation.css'
 import { Link } from 'react-router-dom'
 import { rooms } from './Unaccomodation.js'
 
+
+import Ufooter from '../Ufooter/Ufooter.jsx'
+import Usidebar from '../Usidebar/Usidebar.jsx'
+
 const Uaccomodation = () => {
 
   useEffect(()=>{
@@ -28,6 +32,8 @@ const Uaccomodation = () => {
           ))}
         </div>
       </div>
+      <Usidebar/>
+      <Ufooter/>
     </>
   )
 }

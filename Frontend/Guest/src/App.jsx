@@ -19,17 +19,20 @@ import Sidebar from './component/User/Usidebar/Usidebar';
 import Uconferencehall from './component/User/Uconferencehall/Uconferencehall';
 import Footer from './component/User/Ufooter/Ufooter';
 import Ucareer from './component/User/Ucareer/Ucareer';
+import Ufooter from './component/User/Ufooter/Ufooter';
+import Arooms from './component/Admin/Arooms/Arooms';
 
 
 const App = () => {
   return (
     <BrowserRouter>
     
-      <Sidebar/>
+     
       
       <Routes>
-      <Route path="/admin" element={<Homepage/>} />
+      
         <Route exact path="/" element={<Home/>} />
+        <Route path="/admin" element={<Homepage/>} />
         <Route path="/services" element={<Services/>} />
         <Route path="/accomodation" element={<Uaccomodation/>} />
 
@@ -39,16 +42,24 @@ const App = () => {
         <Route path="/signin" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="/dining" element={<Dining/>} />
-        <Route path="/sidebar" element={<Sidebar/>} />
+
         <Route path="/career" element={<Ucareer/>} />
 
         <Route path="/banquetsconferencehallandmeetingrooms" element={<Uconferencehall/>} />
 
+        <Route path="/arooms" element={<Arooms/>} />
+
+
 
 
       </Routes>
-      <Footer/>
+    
+
+     
+
+     
     </BrowserRouter>
+    
   );
 };
 
