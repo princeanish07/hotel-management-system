@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'room',
     'User',
-    'rest_framework_swagger',
-    'django_rest_passwordreset',
+   
     
 
 ]
@@ -189,5 +188,5 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     
     "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "http://localhost:5173",
 ]

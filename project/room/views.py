@@ -37,6 +37,7 @@ def get_room(request):
         payload = []
         for room_obj in room_objs:
             payload.append({
+                'id':room_obj.id,
                 'room_name': room_obj.room_name,
                 'room_price': room_obj.room_price,
                 'hotel_description': room_obj.room_description,

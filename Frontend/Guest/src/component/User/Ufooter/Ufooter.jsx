@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Ufooter.css";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram, FaSquareThreads, FaYoutube } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 
 const Ufooter = () => {
   useEffect(()=>{
@@ -46,39 +46,39 @@ const Ufooter = () => {
         <div className="Ufooter-lower">
           <ul>
             <li>
-              <Link to="/">HOME</Link>
+              <NavLink to="/" className='Ufooter-lower-navlink'>HOME</NavLink>
             </li>
             <li>
-              <Link to="/about">ABOUT US</Link>
+              <NavLink to="/about"  className='Ufooter-lower-navlink'>ABOUT US</NavLink>
             </li>
             <li>
-              <Link to="/accomodation">ACCOMODATION</Link>
+              <NavLink to="/accomodation" className='Ufooter-lower-navlink'>ACCOMODATION</NavLink>
             </li>
             <li>
-              <Link to="/gallery">GALLERY</Link>
+              <NavLink to="/gallery" className='Ufooter-lower-navlink'>GALLERY</NavLink>
             </li>
             <li>
-              <Link to="/contact">CONTACT</Link>
+              <NavLink to="/contact" className='Ufooter-lower-navlink'>CONTACT</NavLink>
             </li>
             <li>
-              <Link to="/dining">DINING</Link>
+              <NavLink to="/dining" className='Ufooter-lower-navlink'>DINING</NavLink>
             </li>
             <li>
-              <Link to="/services">SERVICES</Link>
+              <NavLink to="/services" className='Ufooter-lower-navlink'>SERVICES</NavLink>
             </li>
             <li>
-              <Link to="/banquetsconferencehallandmeetingrooms">
+              <NavLink to="/banquetsconferencehallandmeetingrooms" className='Ufooter-lower-navlink'>
                 BANQUETS, CONFERENCE HALL AND MEETING ROOMS
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/package">PACKAGE</Link>
+              <NavLink to="/package" className='Ufooter-lower-navlink'>PACKAGE</NavLink>
             </li>
             <li>
-              <Link to="/Career">CAREER</Link>
+              <NavLink to="/Career" className='Ufooter-lower-navlink'>CAREER</NavLink>
             </li>
             <li>
-              <Link to="/reviews">REVIEWS</Link>
+              <NavLink to="/reviews" className='Ufooter-lower-navlink'>REVIEWS</NavLink>
             </li>
           </ul>
         </div>

@@ -1,80 +1,44 @@
-import React from 'react'
-import './Unavbar.css'
-// import hotel_logo from '../../../assets/Hotel-logo.jpg';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaGoogle, FaTwitter} from 'react-icons/fa';
+// Navbar.jsx
+import React, { useState, useEffect } from 'react';
+import './Unavbar.css';
+import Usidebar from '../Usidebar/Usidebar'; 
 
 const Unavbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <nav className="navbar">
-    <div className="navbar-container">
-      <Link to="/" className="navbar-logo">
-       <h1>City View IN</h1>
-      </Link>
-      <ul className="navbar-menu">
-        <li className="navbar-item">
-          <Link to="/" className="navbar-link">
-            Home
-          </Link>
-        </li>
-
-        <li className="navbar-item">
-          <Link to="/about" className="navbar-link">
-            About Us
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/accomodation" className="navbar-link">
-            Accomodation
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/services" className="navbar-link">
-            Service
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/about" className="navbar-link">
-            <li className="navbar-item">
-          <Link to="/banquetsconferencehallandmeetingrooms" className="navbar-link">
-          BANQUETS, CONFERENCE HALL AND MEETING ROOMS
-          </Link>
-        </li>
-          </Link>
-        </li>
-       
-        <li className="navbar-item">
-          <Link to="/gallery" className="navbar-link">
-            Gallery
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/contact" className="navbar-link">
-            Contact
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/dining" className="navbar-link">
-            Dining
-          </Link>
-        </li>
-      </ul>
-      <div className="btn">
-        <button><Link to='/signin' className="navbar-link">LOGIN</Link></button>
-        <div className='icons'>
-          <FaFacebook className='icons-items'/>
-          <FaInstagram className='icons-items'/>
-          <FaGoogle className='icons-items'/>
-          <FaTwitter className='icons-items'/>
-        </div>
+    <nav className={`Unavbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="Unavbar-logo">Logo</div>
+      <div className="Unavbar-actions">
+        <button className="Unavbar-book-now" onClick={toggleSidebar}>
+          Book Now
+        </button>
+        <Usidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       </div>
-     
-    </div>
-   
-  </nav>
-  )
+    </nav>
+  );
+};
 
-}
-
-
-export default Unavbar
+export default Unavbar;

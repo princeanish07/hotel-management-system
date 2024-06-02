@@ -17,7 +17,7 @@ class Room(models.Model):  # Ensure class name is capitalized
     room_price = models.IntegerField()
     room_description = models.TextField()
     amenities = models.ManyToManyField(Amenities)
-    room_img = models.ImageField(upload_to='images/')
+    room_img = models.ImageField()
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
 

@@ -42,28 +42,7 @@
     padding: 0;
   }
   
-  /* Styling for each list item in the sidebar */
-  /* .Usidebar> ul> li {
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 19px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    width: 100%;
-    cursor: pointer;
-  } */
-  
-  /* Hover effect for the list items */
-  /* .Usidebar ul li:hover {
-    background-color: #575757;
-  } */
 
-  /* ul>li>.Usidebar-link{
-    text-decoration: none;
-    color: white;
-   
-  } */
 
   .Usidebar ul{
     display: flex;

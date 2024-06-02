@@ -65,13 +65,20 @@ ul {
   .Ufooter-lower{
 padding: 30px;
 text-align: center;
+
   }
-  .Ufooter-lower>ul>li{
+  .Ufooter-lower>ul>li>{
     padding: 5px;
     font-size: 13px;
     
-  }
-  .Ufooter-lower>ul>li>Link:hover{
-    color: rgb(90, 212, 212);
     
+  }
+  .Ufooter-lower-navlink{
+    color: #4CAF50;
+    
+  }
+ .Ufooter-lower-navlink:hover{
+    text-decoration: underline;
+    color: rgb(90, 212, 212);
+
   }
