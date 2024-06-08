@@ -1,4 +1,6 @@
-.add-room-form {
+
+
+/* .add-room-form {
     background: #f9f9f9;
     padding: 20px;
     border: 1px solid #ddd;
@@ -10,10 +12,9 @@
   
   .add-room-form>label {
     display: block;
-  }
-  .Arooms>ul>li{
-    color: black;
-    display: flex;
-    gap: 30px;
+  } */
+
+  .Arooms{
+    padding-left: 200px;
   }
   

@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  padding: 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 .Ugallery-heading>h1{
-font-size: 22px;
+font-size: 32px;
 font-weight: 500;
 margin-bottom:20px ;
 }

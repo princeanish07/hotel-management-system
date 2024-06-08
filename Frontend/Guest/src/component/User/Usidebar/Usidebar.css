@@ -1,66 +1,71 @@
 /* Styling for the menu icon */
 .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-  
-  /* Base styling for the sidebar */
-  .Usidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    right: -250px; /* Initially hide the sidebar */
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s; /* Smooth transition for opening/closing */
-    padding-top: 60px;
-    z-index: 999;
-  }
-  
-  /* Class applied when the sidebar is open */
-  .Usidebar.open {
-    right: 0; /* Move the sidebar into view */
-  }
-  
-  /* Styling for the close icon inside the sidebar */
-  .close-icon {
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  /* List styling inside the sidebar */
-  .Usidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
 
+/* Base styling for the sidebar */
+.Usidebar {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initially hide the sidebar */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /* Smooth transition for opening/closing */
+  padding-top: 60px;
+  z-index: 999;
+}
 
-  .Usidebar ul{
-    display: flex;
-    flex-direction: column;
-  }
+/* Class applied when the sidebar is open */
+.Usidebar.open {
+  right: 0; /* Move the sidebar into view */
+}
 
-  .Usidebar li{
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 19px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    width: 100%;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .Usidebar li:hover{
-    background-color: #575757;
-  }
+/* Styling for the close icon inside the sidebar */
+.close-icon {
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* List styling inside the sidebar */
+.Usidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Usidebar-content ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.Usidebar-content li {
+  padding: 14px 16px;
+  text-decoration: none; /* Remove underline */
+  font-size: 19px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Usidebar-content > ul > NavLink {
+  text-decoration: none;
+}
+
+.Usidebar li:hover {
+  background-color: #575757;
+}
+.Usidebar-NavLink{
+  text-decoration: none;
+}

@@ -53,7 +53,7 @@ const Uservices = () => {
     </div>
   </div>
   <Usidebar/>
-  <Ufooter/>
+ 
   </>
   )
 }

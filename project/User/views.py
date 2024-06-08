@@ -27,7 +27,7 @@ class SignUpView(APIView):
         from_email = settings.EMAIL_HOST_USER
         recipient_list = [user.email]
         
-        send_mail(subject, message, from_email, recipient_list)   
+        send_mail(subject, message, from_email, recipient_list)      
 
 class LoginView(APIView):
     def post(self, request):

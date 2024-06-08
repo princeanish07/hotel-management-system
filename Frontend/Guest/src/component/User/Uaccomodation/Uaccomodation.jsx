@@ -51,7 +51,7 @@ const Uaccomodation = () => {
         </div>
       </div>
       <Usidebar />
-      <Ufooter />
+     
     </>
   );
 };

@@ -19,6 +19,7 @@ import roomservice from './Udining-img/roomserviceimg.png'
 import "swiper/css";
 import Usidebar from '../Usidebar/Usidebar';
 import Ufooter from '../Ufooter/Ufooter';
+import Unavbar from '../Unavbar/Unavbar';
 
 const diningimg={
   swipeimages:[swipeimg1,swipeimg2,swipeimg3,swipeimg4,swipeimg5,swipeimg5,swipeimg6,swipeimg7]
@@ -33,6 +34,7 @@ const Udining = () => {
   },[])
   return (
     <>
+    <Unavbar/>
     <div id='dining' className="Udining">
         <div className="Udining-con">
             <h1>The Cafe</h1>
@@ -99,7 +101,7 @@ const Udining = () => {
           </div>
         </div>
     </div>
-    <Usidebar/>
+  
     <Ufooter/>
     </>
   )

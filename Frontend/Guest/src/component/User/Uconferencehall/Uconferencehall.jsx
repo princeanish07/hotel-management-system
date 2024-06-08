@@ -16,6 +16,7 @@ import farpavilion from './Uconferencehall-img/farpavillion1.jpg'
 
 import Ufooter from "../Ufooter/Ufooter";
 import Usidebar from "../Usidebar/Usidebar";
+import Unavbar from "../Unavbar/Unavbar";
 
 // import "swiper/css";
 const hallimage={
@@ -28,7 +29,9 @@ const Uconferencehall = () => {
   },[])
   return (
     <>
+      <Unavbar/>
       <div id="conferencehall" className="Uconferencehall">
+    
         <div className="Uconferencehall-con">
           <h1>BANQUETS, CONFERENCE HALL AND MEETING ROOMS</h1>
         </div>
@@ -105,7 +108,7 @@ const Uconferencehall = () => {
           </div>
         </div>
       </div>
-      <Usidebar/>
+      
       <Ufooter/>
     </>
   );

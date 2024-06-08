@@ -44,7 +44,7 @@ const Ucontact = () => {
     
     </div>
     <Usidebar/>
-    <Ufooter/>
+   
     </>
   )
 }

@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Addroomform = ({ onClose, onRoomAdded }) => {
+const AddRoomForm = ({ onClose, onRoomSaved, roomToEdit }) => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [amenities, setAmenities] = useState('');
   const [image, setImage] = useState(null);
+
+  useEffect(() => {
+    if (roomToEdit) {
+      setName(roomToEdit.name);
+      setPrice(roomToEdit.price);
+      setDescription(roomToEdit.description);
+      setAmenities(roomToEdit.amenities);
+    }
+  }, [roomToEdit]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,19 +24,26 @@ const Addroomform = ({ onClose, onRoomAdded }) => {
     formData.append('price', price);
     formData.append('description', description);
     formData.append('amenities', amenities);
-    formData.append('image', image);
+    if (image) {
+      formData.append('image', image);
+    }
+
     try {
-      await axios.post('http://127.0.0.1:8000/api/user/get-rooms/', formData);
-      onRoomAdded();
+      if (roomToEdit) {
+        await axios.put(`http://127.0.0.1:8000/api/user/get-rooms/${roomToEdit.id}/`, formData);
+      } else {
+        await axios.post('http://127.0.0.1:8000/api/user/get-rooms/', formData);
+      }
+      onRoomSaved();
       onClose();
     } catch (error) {
-      console.error('Error adding room', error);
+      console.error('Error saving room', error);
     }
   };
 
   return (
     <div className="add-room-form">
-      <h2>Add Room</h2>
+      <h2>{roomToEdit ? 'Edit Room' : 'Add Room'}</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Room Name</label>
@@ -47,13 +63,13 @@ const Addroomform = ({ onClose, onRoomAdded }) => {
         </div>
         <div>
           <label>Room Image</label>
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} required />
+          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">{roomToEdit ? 'Save Changes' : 'Add Room'}</button>
         <button type="button" onClick={onClose}>Cancel</button>
       </form>
     </div>
   );
 };
 
-export default Addroomform;
+export default AddRoomForm;

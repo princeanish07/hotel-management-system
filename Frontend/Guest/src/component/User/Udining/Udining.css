@@ -1,6 +1,15 @@
+.Udining{
+  padding-top: 80px;
+}
 .Udining-con{
-    text-align: center;
-    padding-top: 30px;
+  position: absolute;
+  left:200px;
+ 
+ text-align: center;
+
+  color: rgb(46, 41, 41);
+   
+
 }
 .Udining-cafe{
     display: flex;
@@ -15,6 +24,7 @@
     font-size: 18px;
     line-height: 25px;
     word-spacing: 5px;
+    margin-top: 20px;
 }
 .Udining-cafe-swiper{
     margin-left: 60px;

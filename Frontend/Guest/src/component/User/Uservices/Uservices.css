@@ -1,5 +1,6 @@
 .services {
-    padding: 20px;
+    padding: 80px 20px;
+    background-color: aliceblue;
   }
   
   .facility-con {
@@ -8,6 +9,7 @@
   }
   .facility-con >h1{
     position: relative;
+    font-size: 36px;
     padding: 5px;
     font-weight: 500;
     
@@ -37,7 +39,7 @@
   }
   
   .facility-item {
-    font-size: 18px; 
+    
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -46,5 +48,8 @@
   
   .facility-item span {
     margin-right: 10px;
+    font-size: 18px;
+
+
   }
   

@@ -1,12 +1,16 @@
 .accomodation {
-  padding: 20px;
+  padding: 80px 20px ;
   text-align: center;
+  background-color: #dbe1e6;
 }
-
+.accomodation-con{
+  padding: 10px;
+}
 .accomodation-con > h1 {
   position: relative;
   padding: 5px;
   font-weight: 500;
+
 }
 
 .accomodation-con > h1::before {
@@ -60,6 +64,7 @@
 .room-type-para {
   font-size: 1em;
   text-align: justify;
+  justify-content: flex-end;
   display: -webkit-box;
   -webkit-line-clamp: 4; /* Limit to 4 lines */
   -webkit-box-orient: vertical;
