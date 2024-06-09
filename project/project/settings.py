@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
-    'room',
+    'hotel_app',
     'User',
-    'rest_framework_swagger',
-    'django_rest_passwordreset',
+
+   
     
 
 ]
@@ -117,6 +117,10 @@ REST_FRAMEWORK = {
     )
    
 }
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 
 # Internationalization
@@ -155,7 +159,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'adhik45899985@gmail.com'
 EMAIL_HOST_PASSWORD = 'awczvpwajzygxmur'
 DEFAULT_FROM_EMAIL = 'adhik45899985@gmail.com'
-
+FRONTEND_URL = 'http://localhost:3000'
 
 #jwt settings
 
