@@ -1,80 +1,90 @@
-import React from 'react'
-import './Unavbar.css'
-// import hotel_logo from '../../../assets/Hotel-logo.jpg';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaGoogle, FaTwitter} from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import './Unavbar.css';
+import Usidebar from '../Usidebar/Usidebar';
+import PopupForm from '../Popupform/PopupForm';
+import Usignin from '../Ulogin/Usignin';
 
 const Unavbar = () => {
-  return (
-    <nav className="navbar">
-    <div className="navbar-container">
-      <Link to="/" className="navbar-logo">
-       <h1>City View IN</h1>
-      </Link>
-      <ul className="navbar-menu">
-        <li className="navbar-item">
-          <Link to="/" className="navbar-link">
-            Home
-          </Link>
-        </li>
+  const [scrolled, setScrolled] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [popupContent, setPopupContent] = useState(null);
 
-        <li className="navbar-item">
-          <Link to="/about" className="navbar-link">
-            About Us
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/accomodation" className="navbar-link">
-            Accomodation
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/services" className="navbar-link">
-            Service
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/about" className="navbar-link">
-            <li className="navbar-item">
-          <Link to="/banquetsconferencehallandmeetingrooms" className="navbar-link">
-          BANQUETS, CONFERENCE HALL AND MEETING ROOMS
-          </Link>
-        </li>
-          </Link>
-        </li>
-       
-        <li className="navbar-item">
-          <Link to="/gallery" className="navbar-link">
-            Gallery
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/contact" className="navbar-link">
-            Contact
-          </Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/dining" className="navbar-link">
-            Dining
-          </Link>
-        </li>
-      </ul>
-      <div className="btn">
-        <button><Link to='/signin' className="navbar-link">LOGIN</Link></button>
-        <div className='icons'>
-          <FaFacebook className='icons-items'/>
-          <FaInstagram className='icons-items'/>
-          <FaGoogle className='icons-items'/>
-          <FaTwitter className='icons-items'/>
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const togglePopup = (content = null) => {
+    setPopupContent(content);
+    setIsPopupOpen(!isPopupOpen);
+  };
+
+  const renderPopupContent = () => {
+    if (popupContent === 'bookNow') {
+      return (
+        <form onSubmit={(e) => { e.preventDefault(); togglePopup(); }}>
+          <h2>City View Inn</h2>
+          <label>
+            Arrival:
+            <input type="date" required />
+          </label>
+          <label>
+            Departure:
+            <input type="date" required />
+          </label>
+          <label>
+            Adults:
+            <input type="number" min="1" defaultValue="1" required />
+          </label>
+          <label>
+            Children:
+            <input type="number" min="0" defaultValue="0" required />
+          </label>
+          <label>
+            Promo Code:
+            <input type="text" />
+          </label>
+          <button type="submit" className="Unavbar-book-now">Book</button>
+        </form>
+      );
+    } else if (popupContent === 'loginRegister') {
+      return <Usignin />;
+    }
+    return null;
+  };
+
+  return (
+    <nav className={`Unavbar ${scrolled ? 'scrolled' : ''} ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+      <div className="Unavbar-logo">Logo</div>
+      <div className="Unavbar-actions">
+        <button className={`Unavbar-book-now ${isSidebarOpen ? 'sidebar-open' : ''}`} onClick={() => togglePopup('bookNow')}>
+          Book Now
+        </button>
+        <button className={`Unavbar-login-register ${isSidebarOpen ? 'sidebar-open' : ''}`} onClick={() => togglePopup('loginRegister')}>
+          Login/Register
+        </button>
+        <div className="Unavbar-menu-icon" onClick={toggleSidebar}>
+          ☰
         </div>
       </div>
-     
-    </div>
-   
-  </nav>
-  )
+      <Usidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      {isPopupOpen && (
+        <PopupForm isOpen={isPopupOpen} togglePopup={() => togglePopup(null)} content={renderPopupContent()} />
+      )}
+    </nav>
+  );
+};
 
-}
-
-
-export default Unavbar
+export default Unavbar;

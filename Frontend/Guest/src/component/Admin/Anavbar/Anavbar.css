@@ -22,8 +22,10 @@
     padding-top: 6px;
     width: 40%;
     text-align: center;
+
  
 }
+
 .search-box{
     padding-top: 6px;
     width: 30%;
@@ -51,7 +53,7 @@
 .search-item > input{
     background-color: transparent;
    outline: none;
-    padding: 3px;
+    padding: 8px;
     border: none;
     font-size: 15px;
     

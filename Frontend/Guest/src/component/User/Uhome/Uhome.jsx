@@ -18,6 +18,7 @@ import Ufooter from "../Ufooter/Ufooter";
 import Usidebar from "../Usidebar/Usidebar";
 import Uabout from "../Uabout/Uabout";
 import Uaccomodation from "../Uaccomodation/Uaccomodation";
+import Unavbar from "../Unavbar/Unavbar";
 
 
 const hotelhomegallery={
@@ -30,7 +31,7 @@ const Uhome = () => {
 
   return (
     <>
-    
+    <Unavbar/>
     <div id="home">
       <Swiper
         slidesPerView={1}
@@ -51,9 +52,9 @@ const Uhome = () => {
         ))}
       </Swiper>
     </div>
-    <Usidebar/>
+    {/* <Usidebar/> */}
     
-    <Ufooter/>
+   
     </>
       
       

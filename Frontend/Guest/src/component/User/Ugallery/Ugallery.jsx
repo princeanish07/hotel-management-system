@@ -27,6 +27,7 @@ import room9 from './Ugallery-img/room9.jpg'
 import room10 from './Ugallery-img/room10.jpg'
 import Ufooter from '../Ufooter/Ufooter';
 import Usidebar from '../Usidebar/Usidebar';
+import Unavbar from '../Unavbar/Unavbar';
 
 
 
@@ -58,7 +59,7 @@ const Ugallery = () => {
 
   return (
     <>
-    
+  
     <div id='gallery' className='Ugallery'>
       <div className="Ugallery-heading">
         <h1>Gallery</h1>
@@ -74,8 +75,8 @@ const Ugallery = () => {
         ))}
       </div>
     </div>
-    <Usidebar/>
-    <Ufooter/>
+
+   
     
     </>
     );

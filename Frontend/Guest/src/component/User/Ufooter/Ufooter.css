@@ -1,77 +1,62 @@
-ul {
-    list-style-type: none;
-    padding: 0;
-    display: inline-block;
-  }
-  li,p {
-    display: block;
-    display: inline-block;
-    margin-right: 15px;
-  }
-  li,a {
-      color:white;
-      text-decoration: none;
-  }
- 
-  li:hover ,.socialmedia a:hover{
-    color: #e6e032ed;
-  }
-  .socialmedia
-  {
-          margin-right: 10px;
-          font-size: 24px;
-  }
+.Ufooter {
+  
+  
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
 
+}
 
-  /* ......... */
-  .Ufooter {
-    background-color: black;
-    color: white;
-    text-align: center;
-    /* height: 300px; */
-    width: 100%;
-  }
-  .Ufooter-con{
-    padding: 30px;
-    text-align: center;
+.Ufooter-con {
+  margin-bottom: 20px;
+}
 
-  }
-  .Ufooter-con>ul>li{
-    padding-left: 30px;
-  }
-  .Ufooter-con>ul>li>span{
-    font-size: 18px;
-    padding: 10px;
-  }
-  .Ufooter-middle{
-   padding: 10px;
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-   font-size: 22px;
-   
-  }
-  .Ufooter-middle>.Ufooter-middle-header>h2{
-    font-weight: 300;
-  }
-  .Ufooter-middle>.Ufooter-socialmedia>a{
-    padding: 10px;
-    font-size: 30px;
-  }
-  .Ufooter-middle>.Ufooter-socialmedia>a:hover{
-    color: aqua;
-  }
+.Ufooter-con>ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  .Ufooter-lower{
-padding: 30px;
-text-align: center;
-  }
-  .Ufooter-lower>ul>li{
-    padding: 5px;
-    font-size: 13px;
-    
-  }
-  .Ufooter-lower>ul>li>Link:hover{
-    color: rgb(90, 212, 212);
-    
-  }
+.Ufooter-con>ul>li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.Ufooter-middle {
+  margin-bottom: 20px;
+}
+
+.Ufooter-middle-header>h2 {
+  font-weight: 300;
+}
+
+.Ufooter-socialmedia {
+  margin-bottom: 20px;
+}
+
+.Ufooter-socialmedia>a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.Ufooter-lower>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Ufooter-lower>ul>li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.Ufooter-lower-navlink {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.Ufooter-lower-navlink:hover {
+  text-decoration: underline;
+  color: rgb(90, 212, 212);
+}
