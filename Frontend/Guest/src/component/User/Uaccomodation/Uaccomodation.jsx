@@ -16,7 +16,7 @@ const Uaccomodation = () => {
 
   const fetchRooms = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/user/get-rooms/');
+      const response = await axios.get('http://127.0.0.1:8000/hotel/get_room_list/');
       console.log(response.data);
       setRooms(response.data);
     } catch (error) {

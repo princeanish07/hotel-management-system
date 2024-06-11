@@ -99,12 +99,7 @@ class LoginView(APIView):
 
         try:
             user = User.objects.get(email=email)
-<<<<<<< HEAD
             if check_password(password, user.password):  # Ensure the correct password checking
-=======
-          
-            if user.check_password(password):  # Use the check_password method on the user instance
->>>>>>> 9f7a40b24e4f04be88a6312567f05f0c354b23f8
                 jwt_object = {
                     'user_id': user.id,
                     'exp': datetime.datetime.utcnow() + datetime.timedelta(days=1)

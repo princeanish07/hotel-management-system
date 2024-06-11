@@ -58,7 +58,7 @@ const Usignup = () => {
 
   const postdata = async () => {
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/user/signup/', formData);
+      const res = await axios.post('http://127.0.0.1:8000/user/signup/', formData);
       console.log(res?.data);
       // Clear the form after successful submission
       setFormData({

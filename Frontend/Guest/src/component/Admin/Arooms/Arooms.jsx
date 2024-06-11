@@ -18,7 +18,7 @@ const Arooms = () => {
   const fetchRooms = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/user/get-rooms/"
+        "http://127.0.0.1:8000/hotel/get_room_list/"
       );
       setRooms(response.data);
       console.log(response.data);
