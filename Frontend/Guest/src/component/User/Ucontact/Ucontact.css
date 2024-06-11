@@ -26,6 +26,7 @@
     font-size:16px;
     color: black;
     gap: 10px;
+    list-style: none;
     
 }
 .Ucontact-detail-li>ul>li>span{
@@ -64,6 +65,7 @@
 }
 iframe{
     border: none;
+    
 }
 .iconcontainer{
     font-size: 25px;
