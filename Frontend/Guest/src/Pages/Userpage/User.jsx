@@ -11,15 +11,12 @@ const User = () => {
         <Unavbar/>
     </div>
     <div className="user-routes">
-
     </div>
     <div className="user-footer">
         <Ufooter/>
     </div>
  </div>
- 
  </>
   )
 }
-
 export default User
