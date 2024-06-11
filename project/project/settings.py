@@ -41,18 +41,11 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
-<<<<<<< HEAD
     'hotel_app',
-    'User',
-
-=======
     'room',
     'Booking',
     'User',
->>>>>>> origin/main
-   
-    
-
+    'onlinebooking',
 ]
 
 MIDDLEWARE = [

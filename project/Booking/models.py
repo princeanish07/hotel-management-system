@@ -10,4 +10,4 @@ class Booking(models.Model):
     promo_code = models.CharField(max_length=50, blank=True, null=True)
 
     def __str__(self):
-        return f"Booking from {self.arrival} to {self.departure} for {self.number_of_adults} adults and {self.number_of_children} children"
+        return "Booking from {self.arrival} to {self.departure} for {self.number_of_adults} adults and {self.number_of_children} children"

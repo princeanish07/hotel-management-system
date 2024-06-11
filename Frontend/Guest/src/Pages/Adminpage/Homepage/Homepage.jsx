@@ -1,4 +1,3 @@
-import React from 'react'
 import Adminnav from '../../../component/Admin/Anavbar/Anavbar';
 import Sidebar from'../../../component/Admin/Asidebar/Asidebar'
 

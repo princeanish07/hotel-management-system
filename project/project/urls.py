@@ -21,16 +21,13 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-    path('hotel/', include("hotel_app.urls")),
-    path('user/',include('User.urls')),
-    
-]+static(settings.MEDIA_URL,documents_root=settings.MEDIA_ROOT)
-=======
-    path('api/user/',include('room.urls')),
-    path('api/user/',include('User.urls')),
-   path('api/user/', include('Booking.urls')),
+    path('hotel/', include('hotel_app.urls')),
+    path('user/', include('User.urls')),
+    path('api/room/', include('room.urls')),
+    path('api/booking/', include('Booking.urls')),
+    path('api/onlinebooking/', include('onlinebooking.urls')),
+
 ]
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> origin/main
